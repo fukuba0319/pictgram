@@ -1,6 +1,8 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)
+    @q = Topic.ransack(params[:q])
+    @topics = @q.result
   end
   
   def new

@@ -82,3 +82,5 @@ gem 'bcrypt'
 gem 'carrierwave'
 
 gem 'font-awesome-sass'
+
+gem 'ransack'

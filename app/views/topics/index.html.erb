@@ -1,5 +1,11 @@
 <div class="topic-index-wrapper">
   <div class="container">
+  <%= search_form_for @q do |f| %>
+    <%= f.label :description_cont, "Keyword" %>　<br>
+    <%= f.search_field :description_cont %>
+
+    <%= f.submit "検索" %>
+  <% end %>  
     <% @topics.each do |topic| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -36,3 +42,4 @@
     <% end %>  
   </div>
 </div>
+  
